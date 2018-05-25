@@ -106,18 +106,18 @@ describe('BrowserAction', function () {
           annotationCount: 1,
         });
         assert.equal(fakeChromeBrowserAction.title,
-        "There's 1 annotation on this page");
+          "There's 1 annotation on this page");
       });
 
     it("sets the badge title when there's >1 annotation",
-        function() {
-          action.update(1, {
-            state: TabState.states.INACTIVE,
-            annotationCount: 23,
-          });
-          assert.equal(fakeChromeBrowserAction.title,
-        'There are 23 annotations on this page');
+      function() {
+        action.update(1, {
+          state: TabState.states.INACTIVE,
+          annotationCount: 23,
         });
+        assert.equal(fakeChromeBrowserAction.title,
+          'There are 23 annotations on this page');
+      });
 
     it('does not set the badge text if there are 0 annotations', function() {
       action.update(1, {

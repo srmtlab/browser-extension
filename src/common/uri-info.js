@@ -13,7 +13,7 @@ function encodeUriQuery(val) {
  */
 function query(uri) {
   return fetch(settings.apiUrl + '/badge?uri=' + encodeUriQuery(uri),
-               {credentials: 'include'})
+    {credentials: 'include'})
     .then(function (res) {
       return res.json();
     }).then(function (data) {

@@ -168,11 +168,11 @@ function SidebarInjector(chromeTabs, dependencies) {
           if (result) {
             return result.type;
           } else {
-              // If the content script threw an exception,
-              // frameResults may be null or undefined.
-              //
-              // In that case, fall back to guessing based on the
-              // tab URL
+            // If the content script threw an exception,
+            // frameResults may be null or undefined.
+            //
+            // In that case, fall back to guessing based on the
+            // tab URL
             return guessContentTypeFromURL(tab.url);
           }
         });

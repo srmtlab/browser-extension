@@ -41,8 +41,8 @@ describe('UriInfo.query', function () {
       .then(function () {
         assert.equal(fetch.callCount, 1);
         assert.equal(
-        fetch.lastCall.args[0],
-        badgeURL + '?uri=http%3A%2F%2Ffoo.com%3Fbar%3Dbaz+q%C3%BCx');
+          fetch.lastCall.args[0],
+          badgeURL + '?uri=http%3A%2F%2Ffoo.com%3Fbar%3Dbaz+q%C3%BCx');
       });
   });
 
